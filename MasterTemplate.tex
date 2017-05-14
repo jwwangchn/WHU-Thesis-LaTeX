@@ -1,41 +1,42 @@
-%% !Mode:: "TeX:UTF-8"
+% !Mode:: "TeX:UTF-8"
 %% 请使用 XeLaTeX 编译本文.
 \documentclass{WHUMaster}   % 选项 forprint: 交付打印时, 建议加上此选项, 以消除彩色链接文字, 避免彩色字迹打印偏淡.
                                               % 选项 forlib: 提交给图书馆的电子版, 需要加上选项 forlib, 以消除空白页和彩色链接.
                                               % 选项 smd: Specialist Master's Degree, 产生专业硕士学位论文封面、页眉.
 %%%=== 参考文献=== %%%
-\bibliographystyle{abbrv}        % 参考文献样式,  plain,unsrt,alpha,abbrv 等等
+\bibliographystyle{abbrv}       			% 参考文献样式,  plain,unsrt,alpha,abbrv 等等
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%-------------------------------------------------
 
-\fenleihao{O159}  % 分类号:《中国图书资料分类法》的类号. 必填. 要根据自己的学科方向填写!!
-\miji{}                % 密级
-\UDC{}               %《国际十进制分类法UDC》的类号. 选填.
-\bianhao{10486}  % 学校编号, 10486是武汉大学的编号. 不用改动.
+
+\fenleihao{O159}  							% 分类号:《中国图书资料分类法》的类号. 必填. 要根据自己的学科方向填写!!
+\miji{}                						% 密级
+\UDC{}               						%《国际十进制分类法UDC》的类号. 选填.
+\bianhao{10486}  							% 学校编号, 10486是武汉大学的编号. 不用改动.
 
 \title{武汉大学硕士论文~\LaTeX~模板}
-\Etitle{A \LaTeX~Thesis Template for Wuhan University} % 英文题目
+\Etitle{A \LaTeX~Thesis Template for Wuhan University} 			% 英文题目
 \author{黄正华}
-\StudentNumber{2013201020001}   % 学号
-\Eauthor{HUANG Zhenghua}            %作者英文名
-\Csupervisor{胡宝清\quad 教授}        %指导教师中文名、职称
-\Esupervisor{Prof.~HU Bao Qing}     %指导教师英文名、职称
-\Cmajor{计算数学}                          % 专业中文名[ SMD:专业类别（领域）]
-\Emajor{Computational Mathematics}% 专业英文名[ SMD:专业类别（领域）]
-\Cspeciality{智能计算}                     % 研究方向
-\Especiality{Intelligent Computing}   % 研究方向
-\Schoolname{School of Mathematics and Statistics} %学院英文名. 不确定的话, 请看一下自己学院的网页上是怎么写的. 别搞错了!
-\date{二〇一六年五月}                    % 硕士类只写年月. 要注意和英文日期一致!!
-\Edate{May, 2016}                   % 英文封面日期
+\StudentNumber{2013201020001}   								% 学号
+\Eauthor{HUANG Zhenghua}            							% 作者英文名
+\Csupervisor{胡宝清\quad 教授}								   % 指导教师中文名、职称
+\Esupervisor{Prof.~HU Bao Qing}     							% 指导教师英文名、职称
+\Cmajor{计算数学}                          						% 专业中文名[ SMD:专业类别（领域）]
+\Emajor{Computational Mathematics}								% 专业英文名[ SMD:专业类别（领域）]
+\Cspeciality{智能计算}                     						% 研究方向
+\Especiality{Intelligent Computing}   							% 研究方向
+\Schoolname{School of Mathematics and Statistics} 				% 学院英文名. 不确定的话, 请看一下自己学院的网页上是怎么写的. 别搞错了!
+\date{二〇一六年五月}                    						 % 硕士类只写年月. 要注意和英文日期一致!!
+\Edate{May, 2016}                   							% 英文封面日期
 
 %-----------------------------------------------------------------------------
-\pdfbookmark[0]{封面}{title}         % 封面页加到 pdf 书签
+\pdfbookmark[0]{封面}{title}         							  % 封面页加到 pdf 书签
 \maketitle
 %-----------------------------------------------------------------------------
-\include{includefile/frontmatter}    % 加入英文封面
+\include{includefile/frontmatter}                               % 加入英文封面
 \frontmatter
-\pagenumbering{Roman}               % 正文之前的页码用大写罗马字母编号.
+\pagenumbering{Roman}                                           % 正文之前的页码用大写罗马字母编号.
 
 \cleardoublepage
 \newpage  \pagestyle{fancy} \fancyfancy
@@ -55,12 +56,12 @@
 \section{具体使用步骤}
 \begin{description}
 
-  \item[Step 1]  进入 includefile 文件夹,  打开 midmatter.tex,  backmatter.tex 这两个文档,
-        分别填写 (1) 中文摘要、英文摘要, (2) 致谢.
+	\item[Step 1]  进入 includefile 文件夹,  打开 midmatter.tex,  backmatter.tex 这两个文档,
+				分别填写 (1) 中文摘要、英文摘要, (2) 致谢.
 
-  \item[Step 2]  打开主文档 MasterTemplate.tex, 填写题目、作者等等信息, 书写正文.
+	\item[Step 2]  打开主文档 MasterTemplate.tex, 填写题目、作者等等信息, 书写正文.
 
-  \item[Step 3]  使用 XeLaTeX 编译. 具体见 \ref{sec-compile} 节.
+	\item[Step 3]  使用 XeLaTeX 编译. 具体见 \ref{sec-compile} 节.
 
 
 \end{description}
@@ -83,9 +84,9 @@ WinEdt 9.0 之后的版本都是默认保存为 UTF-8 的.
 \begin{table}[ht]\centering
 \begin{tabular}{ll}
 \hline
-   \verb|\documentclass{WHUMaster}|                 &  硕士论文 \\
-   \verb|\documentclass[forprint]{WHUMaster}|    &  硕士论文打印版  \\
-   \verb|\documentclass[forlib]{WHUMaster}|       &  硕士论文图书馆提交版  \\
+	 \verb|\documentclass{WHUMaster}|                 &  硕士论文 \\
+	 \verb|\documentclass[forprint]{WHUMaster}|    &  硕士论文打印版  \\
+	 \verb|\documentclass[forlib]{WHUMaster}|       &  硕士论文图书馆提交版  \\
 \hline
 \end{tabular}
 \end{table}
@@ -94,9 +95,9 @@ WinEdt 9.0 之后的版本都是默认保存为 UTF-8 的.
 \begin{table}[ht]\centering
 \begin{tabular}{ll}
 \hline
-   \verb|\documentclass[smd]{WHUMaster}|               &  专业硕士论文 \\
-   \verb|\documentclass[smd,forprint]{WHUMaster}|    &  专业硕士论文打印版  \\
-   \verb|\documentclass[smd,forlib]{WHUMaster}|       &  专业硕士论文图书馆提交版  \\
+	 \verb|\documentclass[smd]{WHUMaster}|               &  专业硕士论文 \\
+	 \verb|\documentclass[smd,forprint]{WHUMaster}|    &  专业硕士论文打印版  \\
+	 \verb|\documentclass[smd,forlib]{WHUMaster}|       &  专业硕士论文图书馆提交版  \\
 \hline
 \end{tabular}
 \end{table}
@@ -109,11 +110,11 @@ WinEdt 9.0 之后的版本都是默认保存为 UTF-8 的.
 
 \section{打印的问题}
 \begin{enumerate}[i)]
-  \item  硕士论文要求\colorbox{yellow}{双面打印}.
-  \item  关于文档选项 forprint: 交付打印时, 建议加上选项 forprint, 以消除彩色链接文字, 避免打印字迹偏淡.
-  \item  打印时留意不要缩小页面或居中. 即页面放缩方式应该是``无''(Adobe Reader XI 是选择``实际大小'').
-           有可能页面放缩方式默认为``适合可打印区域'', 会导致打印为原页面大小的 $97\%$.
-           文字不要居中打印, 是因为考虑到装订, 左侧的空白留得稍多一点(模板已作预留).
+	\item  硕士论文要求\colorbox{yellow}{双面打印}.
+	\item  关于文档选项 forprint: 交付打印时, 建议加上选项 forprint, 以消除彩色链接文字, 避免打印字迹偏淡.
+	\item  打印时留意不要缩小页面或居中. 即页面放缩方式应该是``无''(Adobe Reader XI 是选择``实际大小'').
+					 有可能页面放缩方式默认为``适合可打印区域'', 会导致打印为原页面大小的 $97\%$.
+					 文字不要居中打印, 是因为考虑到装订, 左侧的空白留得稍多一点(模板已作预留).
 \end{enumerate}
 
 \textbf{问}: {\kaishu 生成 PDF 文件时，不能去掉目录和文章的引用彩色方框，请问怎么解决？}
@@ -148,14 +149,14 @@ WinEdt 9.0 之后的版本都是默认保存为 UTF-8 的.
  \begin{table}[ht]\centering
 \begin{tabular}{r|r|l}
 \hline\hline
-  \multicolumn{2}{l|}{MasterTemplate.tex }  &  主文档. 在其中填写正文.\\\hline
-                          &frontmatter.tex&  英文封面. \hfill ({\kaishu 无需干预}) \\\cline{2-3}
+	\multicolumn{2}{l|}{MasterTemplate.tex }  &  主文档. 在其中填写正文.\\\hline
+													&frontmatter.tex&  英文封面. \hfill ({\kaishu 无需干预}) \\\cline{2-3}
  includefile 文件夹  & midmatter.tex  &  中文摘要, 英文摘要.\hfill  ({\kaishu 自行填写}) \\\cline{2-3}
-                            & backmatter.tex &  致谢.\hfill  ({\kaishu 自行填写}) \\\hline
-  \multicolumn{2}{l|}{figures 文件夹} &  存放图片文件.\\\hline
-  \multicolumn{2}{l|}{BIBbase 文件夹} &   供 BibTeX{} 做参考文献时选用.\\
+														& backmatter.tex &  致谢.\hfill  ({\kaishu 自行填写}) \\\hline
+	\multicolumn{2}{l|}{figures 文件夹} &  存放图片文件.\\\hline
+	\multicolumn{2}{l|}{BIBbase 文件夹} &   供 BibTeX{} 做参考文献时选用.\\
 \hline
-  \multicolumn{2}{l|}{WHUMaster.cls} &  定义文档格式的 class file. 不可删除.\\ \hline \hline
+	\multicolumn{2}{l|}{WHUMaster.cls} &  定义文档格式的 class file. 不可删除.\\ \hline \hline
 \end{tabular}
 \end{table}
 %  \footnotetext[1]{定制这个参考文献格式, 主要是希望尽可能满足武汉大学硕士论文的相应格式要求, 比如要求将~article 的``年份''写在``卷号''之前.
@@ -173,15 +174,15 @@ WinEdt 9.0 之后的版本都是默认保存为 UTF-8 的.
 
 利用~WinEdt~的~Project tree, 可以方便地管理这些文件:
 \begin{itemize}
-    \item 点击~WinEdt~窗口的~Project Tree~按键;
-    \item 再点击~WinEdt~窗口的~Set Main File~按键;
+		\item 点击~WinEdt~窗口的~Project Tree~按键;
+		\item 再点击~WinEdt~窗口的~Set Main File~按键;
 \end{itemize}
 接下来的管理, 已经清楚地展示在跳出的窗口中了. 再去处理其他的文件时, 还要点击~WinEdt~窗口的~Remove Main File~按键.
 
 
 英文封面页加了校徽, 有黑白、彩色两种备选, 都是矢量图形, 放大不会失真. 图片文件很小,
 用~MetaPost~生成的(准确的说, 是最后一道工序用到了~MetaPost), 过程有点复杂.
-封面上毛体字的``武汉大学''也是这样做出的. 
+封面上毛体字的``武汉大学''也是这样做出的.
 
 
 
@@ -228,13 +229,13 @@ WinEdt 9.0 之后的版本都是默认保存为 UTF-8 的.
 
 \begin{description}
 %  \item[amsmath,amssymb]
-  \item[cite]  参考文献引用, 得到形如 [3-7] 的样式.
-  \item[color,xcolor]  支持彩色.
-  \item[enumerate]  方便自由选择 enumerate 环境的编号方式. 比如
+	\item[cite]  参考文献引用, 得到形如 [3-7] 的样式.
+	\item[color,xcolor]  支持彩色.
+	\item[enumerate]  方便自由选择 enumerate 环境的编号方式. 比如
 
-  \verb|\begin{enumerate}[(a)]| 得到形如 (a), (b), (c) 的编号.
+	\verb|\begin{enumerate}[(a)]| 得到形如 (a), (b), (c) 的编号.
 
-  \verb|\begin{enumerate}[i)]| 得到形如 i), ii), iii) 的编号.
+	\verb|\begin{enumerate}[i)]| 得到形如 i), ii), iii) 的编号.
 
 \end{description}
 
@@ -312,7 +313,7 @@ x = 1.
 \end{definition}
 
 \begin{remark}
-  整数集合在数学上通常表示为 $\mathbf{Z}$ 或 $\mathbb{Z}$, 该记号源于德语单词 Zahlen(意为``数'')的首字母.
+	整数集合在数学上通常表示为 $\mathbf{Z}$ 或 $\mathbb{Z}$, 该记号源于德语单词 Zahlen(意为``数'')的首字母.
 \end{remark}
 
 \begin{proposition}
@@ -320,11 +321,11 @@ x = 1.
 \end{proposition}
 
 \begin{example}
-  $1+2=3$.
+	$1+2=3$.
 \end{example}
 
 \begin{corollary}
-   在整数集合内, 相加、相减、相乘运算是封闭的.
+	 在整数集合内, 相加、相减、相乘运算是封闭的.
 \end{corollary}
 
 \section{图形与表格}
@@ -339,9 +340,9 @@ x = 1.
 
 \begin{figure}[ht]
 \centering
-  \includegraphics[width=\textwidth]{Daisy.jpg}
-  \caption{一个彩色 jpg 图片的例子}
-  \label{fig:1}
+	\includegraphics[width=\textwidth]{Daisy.jpg}
+	\caption{一个彩色 jpg 图片的例子}
+	\label{fig:1}
 \end{figure}
 
 表格问题, 建议使用``三线表'', 如表 \ref{tab:1}.
@@ -350,15 +351,15 @@ x = 1.
 \centering
 \caption{一般三线表}
 \label{tab:1}
-    \begin{tabular}{c c c c c c c c c c c}
-    \hline
-    123 & 4  & 5  & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
-    \hline
-    67 & 890 & 13 & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
-    67 & 890 & 13 & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
-    67 & 890 & 13 & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
-    \hline
-    \end{tabular}
+		\begin{tabular}{c c c c c c c c c c c}
+		\hline
+		123 & 4  & 5  & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
+		\hline
+		67 & 890 & 13 & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
+		67 & 890 & 13 & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
+		67 & 890 & 13 & 123 & 4 & 5123 & 4 & 5 & 123 & 4 & 5\\
+		\hline
+		\end{tabular}
 \end{table}
 
 %\begin{table}[h]
@@ -392,22 +393,22 @@ x = 1.
 \chapter{其他事项}
 以下是广告时间, 插播一段广告:
 \begin{itemize}
-    \item 插图的制作, 建议 pgf.
-          pgf 的长处是源文件直接植入~\TeX~文档, 管理起来非常方便.
-    这里有我写的一个关于初次使用~pgf~的帖子:\\    \url{http://bbs.ctex.org/forum.php?mod=viewthread&tid=30480}.
-    \item 生成参考文献, 建议使用~BibTeX.  这里有我写的一个文档: \\
-    \url{http://bbs.ctex.org/forum.php?mod=viewthread&tid=26056}.
+		\item 插图的制作, 建议 pgf.
+					pgf 的长处是源文件直接植入~\TeX~文档, 管理起来非常方便.
+		这里有我写的一个关于初次使用~pgf~的帖子:\\    \url{http://bbs.ctex.org/forum.php?mod=viewthread&tid=30480}.
+		\item 生成参考文献, 建议使用~BibTeX.  这里有我写的一个文档: \\
+		\url{http://bbs.ctex.org/forum.php?mod=viewthread&tid=26056}.
 
-      {\kaishu 使用 BibTeX{} 做参考文献时,
-      借助 EndNote 或者 NoteExpress, 可以非常漂亮简单地解决 bib 文件的录入问题.
-      NoteExpress 在校图书馆网站有正版软件提供下载.
-      当然 EndNote 本身就是 Thomson Corporation 推出的(和 SCI 搜索引擎是同一家公司),
-      和多个重要文献搜索引擎有良好的功能配合.
+			{\kaishu 使用 BibTeX{} 做参考文献时,
+			借助 EndNote 或者 NoteExpress, 可以非常漂亮简单地解决 bib 文件的录入问题.
+			NoteExpress 在校图书馆网站有正版软件提供下载.
+			当然 EndNote 本身就是 Thomson Corporation 推出的(和 SCI 搜索引擎是同一家公司),
+			和多个重要文献搜索引擎有良好的功能配合.
 
-      Google 学术搜索也提供了文献的 bib 格式.
-      录入参考文献时, 偶尔用一用 Google 学术搜索, 还可以核查或减少录入的错误, 并减少录入的工作量.}
-     \item 幻灯片的制作, 建议使用~Beamer. 这里有我写的一个模板, 谨供参考:\\
-    \url{http://bbs.ctex.org/forum.php?mod=viewthread&tid=27695}.
+			Google 学术搜索也提供了文献的 bib 格式.
+			录入参考文献时, 偶尔用一用 Google 学术搜索, 还可以核查或减少录入的错误, 并减少录入的工作量.}
+		 \item 幻灯片的制作, 建议使用~Beamer. 这里有我写的一个模板, 谨供参考:\\
+		\url{http://bbs.ctex.org/forum.php?mod=viewthread&tid=27695}.
 \end{itemize}
 
 %%%=====================================================================%%%
@@ -534,24 +535,24 @@ x = 1.
 
  \bigskip
 
-    经研究生院与图书馆共同商议决定, 武汉大学研究生在学位论文答辩通过后,
-    采用以下方式提交学位论文：首先进行电子版论文网上提交, 经图书馆审核通过后, 进行纸本论文提交.
+		经研究生院与图书馆共同商议决定, 武汉大学研究生在学位论文答辩通过后,
+		采用以下方式提交学位论文：首先进行电子版论文网上提交, 经图书馆审核通过后, 进行纸本论文提交.
 
 \section*{前期准备}
 \begin{itemize}
-  \item[一、] 请下载《武汉大学学位论文使用授权协议书》(一式两份), 一份论文作者保存, 一份留学校存档.
-    留学校存档的协议书事先用钢笔或中性笔填写后,  装订在提交给学校图书馆的纸本论文末页.\footnote{\heiti 特别说明:
-    本文最后给出的《武汉大学学位论文使用授权协议书》, 有不同的版本: 研究生院网站和校图书馆网站给出的协议书, 内容稍有不同.
-    本文使用的是图书馆的版本, 我认为这个版本要新一些. 图书馆最后收取纸质版论文时, 会当面核查该协议书.}
+	\item[一、] 请下载《武汉大学学位论文使用授权协议书》(一式两份), 一份论文作者保存, 一份留学校存档.
+		留学校存档的协议书事先用钢笔或中性笔填写后,  装订在提交给学校图书馆的纸本论文末页.\footnote{\heiti 特别说明:
+		本文最后给出的《武汉大学学位论文使用授权协议书》, 有不同的版本: 研究生院网站和校图书馆网站给出的协议书, 内容稍有不同.
+		本文使用的是图书馆的版本, 我认为这个版本要新一些. 图书馆最后收取纸质版论文时, 会当面核查该协议书.}
 
-    \item[二、]涉密论文缴送到武汉大学档案馆, 由档案馆加盖公章后到图书馆办理相关离校手续.
+		\item[二、]涉密论文缴送到武汉大学档案馆, 由档案馆加盖公章后到图书馆办理相关离校手续.
 
-    \item[三、]电子版论文要求
+		\item[三、]电子版论文要求
 \begin{enumerate}[1.]
-  \item 论文的电子文本应采用 Word 或 PDF 格式编辑(不加密).
-  \item 电子版全文包括的内容及顺序应与纸本一致: 包括中英文封面、郑重声明、中英文摘要、目录、引言、正文(含图表)、参考文献及附录, 并放在一个文档中.
-  \item \colorbox{yellow}{电子版文档中不能有空白页、标记、彩色字、乱码.}
-  \item 目录的页码一定要与正文的章节以及附后的内容相符合. 论文正文页码须从第一页起, 正文之前部分(不包括封面)用罗马字母(I, II, \dots)编页.
+	\item 论文的电子文本应采用 Word 或 PDF 格式编辑(不加密).
+	\item 电子版全文包括的内容及顺序应与纸本一致: 包括中英文封面、郑重声明、中英文摘要、目录、引言、正文(含图表)、参考文献及附录, 并放在一个文档中.
+	\item \colorbox{yellow}{电子版文档中不能有空白页、标记、彩色字、乱码.}
+	\item 目录的页码一定要与正文的章节以及附后的内容相符合. 论文正文页码须从第一页起, 正文之前部分(不包括封面)用罗马字母(I, II, \dots)编页.
 \end{enumerate}
 \end{itemize}
 
@@ -559,16 +560,16 @@ x = 1.
 
 \section*{电子版论文提交}
 
-    进入图书馆主页(\url{http://www.lib.whu.edu.cn})点击``博硕士论文提交'', 进入论文提交系统.
-    具体步骤和注意事项请参见论文提交过程演示(PPT).
-    论文提交成功的 3 个工作日后, 可查收 Email 或在``已通过论文名单查询''中查询论文是否审核通过.
-    如果提交的论文不合格, 请按邮件要求修改后再次进入系统提交论文.
+		进入图书馆主页(\url{http://www.lib.whu.edu.cn})点击``博硕士论文提交'', 进入论文提交系统.
+		具体步骤和注意事项请参见论文提交过程演示(PPT).
+		论文提交成功的 3 个工作日后, 可查收 Email 或在``已通过论文名单查询''中查询论文是否审核通过.
+		如果提交的论文不合格, 请按邮件要求修改后再次进入系统提交论文.
 
 
 \section*{纸本论文提交}
 
-    电子版论文提交审核通过的, 请提交 1 份纸本论文到相应的论文纸本缴送地,
-    末页须装订一份填写好的协议书.
+		电子版论文提交审核通过的, 请提交 1 份纸本论文到相应的论文纸本缴送地,
+		末页须装订一份填写好的协议书.
 
 
 
@@ -579,15 +580,15 @@ x = 1.
 \addcontentsline{toc}{chapter}{参考文献}
 \begin{thebibliography}{000}\zihao{5}
 
-  \bibitem{r1} 作者, 文章题目, 期刊名, 年份(期数): 起止页码
+	\bibitem{r1} 作者, 文章题目, 期刊名, 年份(期数): 起止页码
 
-  \bibitem{r2} 作者, 书名, 年份, 版次, 出版地: 出版单位, 起止页码
+	\bibitem{r2} 作者, 书名, 年份, 版次, 出版地: 出版单位, 起止页码
 
-  \bibitem{r3} 邓建松等, 《\LaTeXe~科技排版指南》, 科学出版社
+	\bibitem{r3} 邓建松等, 《\LaTeXe~科技排版指南》, 科学出版社
 
-  \bibitem{r4} 吴凌云, 《CTeX~FAQ (常见问题集)》, \textit{Version~0.4}, June 21, 2004
+	\bibitem{r4} 吴凌云, 《CTeX~FAQ (常见问题集)》, \textit{Version~0.4}, June 21, 2004
 
-  \bibitem{r5} Herbert Vo\ss, Mathmode, \url{http://www.tex.ac.uk/ctan/info/math/voss/mathmode/Mathmode.pdf}.
+	\bibitem{r5} Herbert Vo\ss, Mathmode, \url{http://www.tex.ac.uk/ctan/info/math/voss/mathmode/Mathmode.pdf}.
 
 \end{thebibliography}
 
